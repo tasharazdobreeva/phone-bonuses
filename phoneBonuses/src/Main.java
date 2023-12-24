@@ -1,13 +1,19 @@
 public class Main {
     public static void main(String[] args) {
 
-        // Объявляете переменные для входных данных и
-        // параметров программы: начального счёта,
-        // суммы пополнения и тп
+        int amount = 100;
+        int payment = 200;
 
-        // Условным оператором проверяете, превысила ли
-        // сумма пополнения порог, и для этих двух разных
-        // сценариев рассчитываете сумму бонуса и выводите
-        // на экран.
+        boolean rechargeAmount = payment > 1000;
+
+        int calculateBonus;
+        if (rechargeAmount) {
+            calculateBonus = payment / 100;
+        } else {
+            calculateBonus = 0;
+        }
+
+        int finalScore = amount + payment + calculateBonus;
+        System.out.println("бонус равен: " +  calculateBonus + " рублей, итоговая сумма на счету клиента: " + finalScore + " рублей");
     }
 }
