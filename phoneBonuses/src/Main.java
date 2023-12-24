@@ -6,12 +6,14 @@ public class Main {
 
         boolean rechargeAmount = payment > 1000;
 
-        int calculateBonus;
-        if (rechargeAmount) {
-            calculateBonus = payment / 100;
-        } else {
-            calculateBonus = 0;
-        }
+//       int calculateBonus;
+//        if (rechargeAmount) {
+//            calculateBonus = payment / 100;
+//        } else {
+//            calculateBonus = 0;
+//        }
+
+        int calculateBonus = rechargeAmount ? payment/100 : 0;
 
         int finalScore = amount + payment + calculateBonus;
         System.out.println("бонус равен: " +  calculateBonus + " рублей, итоговая сумма на счету клиента: " + finalScore + " рублей");
